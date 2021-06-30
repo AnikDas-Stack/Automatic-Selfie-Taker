@@ -28,4 +28,7 @@ while True:
     cv2.imshow('Photo', frame)
     if cv2.waitKey(10) == ord('q'):
         break
+  
+capture.release()
+cv2.destroyAllWindows()
     
