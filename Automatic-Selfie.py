@@ -17,7 +17,7 @@ while True:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 255), 2)
         face_roi = frame[y:y+h, x:x+w]
         gray_roi = gray_frame[y:y+h, x:x+w]
-        smile = smile_cascade.detectMultiScale(gray_roi, 1.3, 25)
+        smile = smile_cascade.detectMultiScale(gray_roi, 1.7, 5)
         
         for x1, y1, w1, h1 in smile:
             cv2.rectangle(face_roi, (x1, y1), (x1+w1, y1+h1), (0, 0, 255), 2)
